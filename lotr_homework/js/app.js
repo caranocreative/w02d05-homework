@@ -42,10 +42,10 @@ const lands = [
 // ============
 const makeMiddleEarth = () => {
 
-  // HINT: Make a console.log for each of your functions to make sure that, when you click, the correct function is being called!
-
+ 
   console.log("Trying to make middle earth.");
 
+  //$('body').append('<section id='middleEarth'/>');
 
   const $middleEarth = $('<section id="middleEarth"></section>')
 
@@ -62,19 +62,40 @@ const makeMiddleEarth = () => {
 
 };
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 1 complete - Made Middle Earth".
-
 // ============
 // Chapter 2
 // ============
+
 const makeHobbits = () => {
 
-  console.log('Make hobbits');
+const $ul = $('<ul/>');
+  
+  for(let i = 0; i < hobbits.length; i++) {
+    const $li = $('<li class="hobbit"></li>'); // you can combine
+    // or $li.addClass('hobbit'); or //$li.attr('id', 'hobbit', hobbits[i]);
+    $li.text(hobbits[i]);
+    $ul.append($li);  
+    //$li.appendTo($ul);
+}
+
+$('#The-Shire').append($ul);
+
+//for(let i = 0; i < hobbits.length; i++) {
+   //$li.append('<li class="hobbit">${hobbits[i]}</li>') 
+   //}
+
+
 
   // 1. display an unordered list of the hobbits in the shire.
 
   // 2. give each hobbit a class of "hobbit"
+//  class hobbit {
+//     frodoBaggins;
+//     samGamgee;
+//     merryBrandybuck;
+//     pippinTook;
+// };
+// console.log(#hobbit);
 
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
@@ -90,9 +111,24 @@ const makeHobbits = () => {
 // ============
 const keepItSecretKeepItSafe = () => {
 
-  // 1. create an empty div with an id of 'the-ring'
+ //$('<div id=the-ring></div>');
+//console.log('#the-ring' + ' I hope this works');
+//$('#the-ring').append()
 
-  // 2. add the ring as a child of Frodo
+ $("li:contains('Frodo')").append ("<div id='the-ring'</div>");
+
+// const $theRing = $('<div/>')
+// $theRing.attr('id', 'the-ring')
+// $(li:)
+
+  // 1. create an empty div with an id of 'the-ring'
+//const $div = $('<div/>');
+
+//$div('the-ring').addClass($div);
+
+  // 2. add the ring as a child of Frodo // grab frodo and append a div
+  //with ID of the ring // get an element with text :contain()
+
 
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
@@ -124,8 +160,20 @@ const makeBaddies = () => {
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
+$('<aside/>').appendTo('#middleEarth');
 
   // 2. display an unordered list of buddies in the aside
+const $buddies =$('<aside/>');
+$buddies.appendTo('middleEarth');
+const $buddiesList = $('<ul/>');
+$buddiesList.appendTo($buddies);
+for (var i = 0; i < buddies.length; i++) {
+  const $buddy = $('<li class="buddy"></li>');
+  $buddy.text(buddies[i]);
+  $buddies.append($buddy);
+
+}
+
 
   // 3. give each of the buddies a class of "buddy"
 
@@ -167,6 +215,21 @@ const beautifulStranger = () => {
 // ============
 const forgeTheFellowShip = () => {
 
+  //$('hobbits').remove().appendTo('#the-fellowship');
+
+  // // 1. create a new div with an id 'the-fellowship'
+
+    
+  // // 2. add an h1 with the text 'The Fellowship' to this new div
+
+
+  // // 3. append the fellowship to middle-earth
+
+
+  // // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+
+
+};
   // 1. create a new div with an id 'the-fellowship'
 
   // 2. add an h1 with the text 'The Fellowship' to this new div
@@ -175,7 +238,7 @@ const forgeTheFellowShip = () => {
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
-};
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
@@ -184,6 +247,12 @@ const forgeTheFellowShip = () => {
 // Chapter 9
 // ============
 const theBalrog = () => {
+
+ ///right click on browser page gandalf..
+ $('<li>:contains("Gandalf")').text("Gandalf the White").addClass('The White').css('background-color: white');
+
+
+
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
 
@@ -281,5 +350,9 @@ $(() => {
   $('#11').on('click', itsDangerousToGoAlone);
   $('#12').on('click', weWantsIt);
   $('#13').on('click', thereAndBackAgain);
+
+  $('button').click();
+  
+
 
 });
