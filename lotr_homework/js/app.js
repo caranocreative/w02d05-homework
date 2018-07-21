@@ -71,37 +71,17 @@ const makeHobbits = () => {
 const $ul = $('<ul/>');
   
   for(let i = 0; i < hobbits.length; i++) {
-    const $li = $('<li class="hobbit"></li>'); // you can combine
-    // or $li.addClass('hobbit'); or //$li.attr('id', 'hobbit', hobbits[i]);
+    const $li = $('<li class="hobbit"></li>'); 
     $li.text(hobbits[i]);
     $ul.append($li);  
-    //$li.appendTo($ul);
-}
+ }
 
 $('#The-Shire').append($ul);
-
-//for(let i = 0; i < hobbits.length; i++) {
-   //$li.append('<li class="hobbit">${hobbits[i]}</li>') 
-   //}
-
-
-
-  // 1. display an unordered list of the hobbits in the shire.
-
-  // 2. give each hobbit a class of "hobbit"
-//  class hobbit {
-//     frodoBaggins;
-//     samGamgee;
-//     merryBrandybuck;
-//     pippinTook;
-// };
-// console.log(#hobbit);
-
+};
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
 
-};
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
@@ -111,20 +91,29 @@ $('#The-Shire').append($ul);
 // ============
 const keepItSecretKeepItSafe = () => {
 
- //$('<div id=the-ring></div>');
+/////laurie note////
+//$('<div id=the-ring></div>');
 //console.log('#the-ring' + ' I hope this works');
 //$('#the-ring').append()
+/////////////
+
 
  $("li:contains('Frodo')").append ("<div id='the-ring'</div>");
-
+///////laurie note///////
 // const $theRing = $('<div/>')
 // $theRing.attr('id', 'the-ring')
 // $(li:)
+//////////////////////
+
 
   // 1. create an empty div with an id of 'the-ring'
+////////laurie note
 //const $div = $('<div/>');
 
 //$div('the-ring').addClass($div);
+//////////////
+
+
 
   // 2. add the ring as a child of Frodo // grab frodo and append a div
   //with ID of the ring // get an element with text :contain()
@@ -214,8 +203,10 @@ const beautifulStranger = () => {
 // Chapter 8
 // ============
 const forgeTheFellowShip = () => {
-
+  ///laurie note/////
   //$('hobbits').remove().appendTo('#the-fellowship');
+  /////////////
+
 
   // // 1. create a new div with an id 'the-fellowship'
 
@@ -247,10 +238,10 @@ const forgeTheFellowShip = () => {
 // Chapter 9
 // ============
 const theBalrog = () => {
-
+////////laurie note
  ///right click on browser page gandalf..
  $('<li>:contains("Gandalf")').text("Gandalf the White").addClass('The White').css('background-color: white');
-
+////////////////
 
 
 
